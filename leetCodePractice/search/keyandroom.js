@@ -14,7 +14,6 @@
         })
         
     }
-    
     let visited = new Set();
     visited.add(0);
     let total = 0;
