@@ -17,7 +17,6 @@
         if (root === null) {
             return;
         }
-        console.log(root.val)
         if (root.left) {
             dfs(root.left);
         }
