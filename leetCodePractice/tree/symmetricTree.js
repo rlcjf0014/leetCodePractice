@@ -12,9 +12,8 @@
  */
  var isSymmetric = function(root) {
 
-    if (root === null) {
-        return false;
-    }
+    if (root === null) return false;
+    
     
     let leftStack = [root.left];
     let rightStack = [root.right];
