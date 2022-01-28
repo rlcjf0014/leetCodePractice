@@ -1,8 +1,8 @@
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -19,7 +19,7 @@ class Solution(object):
             sum = l1Val + l2Val
             
             if nextDigit == True:
-                sum += 1
+                sum+=1
                 
             if sum >= 10:
                 nextDigit = True
