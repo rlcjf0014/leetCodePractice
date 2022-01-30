@@ -22,7 +22,7 @@ class Solution(object):
         if i<0 or j<0 or i>=len(grid) or j>=len(grid[0]) or grid[i][j] != '1':
             return
         # If it is 1, change its mark
-        grid[i][j] = '#'
+        grid[i][j] = 'C'
         # Check its adjacent element
         self.dfs(grid, i+1, j)
         self.dfs(grid, i-1, j)
