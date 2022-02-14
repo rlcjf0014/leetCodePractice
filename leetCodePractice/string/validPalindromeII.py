@@ -7,7 +7,8 @@ class Solution:
             if s[i] != s[j]:
                 s1, s2 = s[i + 1: j + 1], s[i: j]
                 break
-            i , j = i + 1, j - 1
+            i = i + 1
+            j = j - 1
 
         return s1 == s1[::-1] or s2 == s2[::-1]
         
