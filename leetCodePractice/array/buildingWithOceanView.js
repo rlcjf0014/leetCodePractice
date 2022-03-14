@@ -3,17 +3,14 @@
  * @return {number[]}
  */
  var findBuildings = function(heights) {
-    let result = heights;
-    
-    for (let i = 0; i < heights.length; i++) {
-        for (j = i+1; j < heights.length; j++) {
-            if (heights[j] > heights[i]) {
-                let index = result.indexOf(heights[i]);
-                if (index > -1) {
-                    array.splice(index, 1); // 2nd parameter means remove one item only
-                }
-                continue;
-            }
-        }
-    
-};
+    const ans = [];
+    let max = 0;
+    for (let i = heights.length - 1; i >= 0; i -= 1) {
+      if (max < heights[i]) {
+        ans.unshift(i);
+        max = heights[i];
+      }
+    }
+    return ans;
+      
+  };
