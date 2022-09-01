@@ -12,5 +12,14 @@ class Solution(object):
                 return [record[destination], i]
             else:
                 record[nums[i]] = i
+
+        record = {}
+        for i in range(len(nums)):
+            if nums[i] in record:
+                val = record[nums[i]]
+                return [i, val]
+            else:
+                diff = target - nums[i]
+                record[diff] = i
         
         
