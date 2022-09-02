@@ -14,4 +14,9 @@ class Solution(object):
         
         return len(t) == 0
         
+
+        if len(s) != len(t):
+            return False
+        
+        return ''.join(sorted(s)) == ''.join(sorted(t))
             
