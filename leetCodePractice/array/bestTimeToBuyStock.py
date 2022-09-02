@@ -15,3 +15,17 @@ class Solution(object):
                 min = prices[i]
                 
         return max
+
+        
+
+        minimum = prices[0]
+        maximum = 0
+        
+        for i in range(1, len(prices)):
+            if prices[i] - minimum > maximum:
+                maximum = prices[i] - minimum
+            
+            if minimum > prices[i]:
+                minimum = prices[i]
+                
+        return maximum
