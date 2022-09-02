@@ -27,6 +27,38 @@ class Solution(object):
         prev.next = l1 if l1 is not None else l2
 
         return prehead.next
+
+
+        if list1 is None or list2 is None:
+            return list1 or list2
+        
+        newList = None
+        tail = None
+        
+        curr1 = list1
+        curr2 = list2
+        
+        while curr1 and curr2:
+            newN = None
+            if curr1.val > curr2.val:
+                newN = ListNode(curr2.val)
+                curr2 = curr2.next
+            else:
+                newN = ListNode(curr1.val)
+                curr1 = curr1.next
+                
+            if newList is None:
+                newList = newN
+                tail = newN
+            else:
+                tail.next = newN
+                tail = newN
+        
+        rest = curr1 or curr2
+        tail.next = rest
+
+        
+        return newList
             
             
         
