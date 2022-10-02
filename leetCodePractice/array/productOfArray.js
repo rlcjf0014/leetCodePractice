@@ -3,7 +3,7 @@
  * @return {number[]}
  */
  var productExceptSelf = function(nums) {
-    var output = [];
+   var output = [];
    var leftMult = 1;
    var rightMult = 1;
    for (var i=nums.length - 1; i >= 0; i--) {
