@@ -10,6 +10,8 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
+        # Reviewed Invert Binary Tree 
+
         if root:
             self.invertTree(root.left)
             self.invertTree(root.right)
