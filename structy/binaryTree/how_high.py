@@ -4,6 +4,7 @@
 #     self.left = None
 #     self.right = None
 
+# DFS Recursive
 def how_high(node):
   if not node:
     return -1
